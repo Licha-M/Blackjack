@@ -56,7 +56,7 @@ El sistema incluye un modal de documentación interna accesible desde la interfa
 
 ## 👥 Créditos / Autores
 
-* Desarrollado y diseñado por **Muñoz y Geréz**.
+* Desarrollado y diseñado por **[Licha](https://github.com/Licha-M)** y **[Agus](https://github.com/)**.
 
 ## 📄 Licencia
 
