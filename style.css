@@ -1,0 +1,306 @@
+body{
+    margin: 0;
+    text-align:center;
+    width: 100%;
+    height: 100vh;
+    font-family:Verdana, Tahoma, sans-serif;
+}
+h2{
+    text-shadow: 2px 2px 1px rgb(197, 206, 148);
+}
+a:link,a:visited{
+    text-decoration: none;
+    color:#fff;
+    text-shadow: 0px 0px 6px #ecb95a;
+    font-size:24px;
+}
+a:hover{
+    color:#575555;
+    text-shadow: 0px 0px 6px#000000;
+}
+.reglasdediv{
+    width: auto;
+    background-color:rgba(255, 255, 255, 0.329);
+    border-radius:20px;
+    padding:1%;
+    display:none;
+}
+.reglas{
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.82);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    font-family:Verdana, Tahoma, sans-serif;
+    font-size:20px;
+    color: #ffffff;
+    text-shadow: 3px 4px 2px rgb(27, 24, 29);
+} 
+.reglas2{
+    background-color: #575555;
+    width: 72%;
+    height: 72%;
+    text-align: left;
+    padding: 1.5%;
+    border-radius: 20px;
+    overflow: auto;
+    border: 15px solid #ff000000;
+    text-shadow: 3px 4px 2px rgb(27, 24, 29);
+}
+.retit{
+    font-size: 35px;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+.retit2{
+    font-size: 35px;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+table, table td{
+    border-color:rgb(0, 0, 0);
+    border-style:solid;
+    margin:auto;
+    border-collapse: collapse; 
+    padding:1%;
+}
+.th2{
+    text-align: center;
+}
+.valores td{
+    width: 33%;
+}
+header{
+    background: radial-gradient(circle, rgb(67 135 67) 11%, rgb(21 37 22) 75%);
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    padding-top: 0;
+    padding-bottom: 0;
+    color:#ffffff;
+    font-size: 35px;
+    text-shadow: 3px 4px 2px rgb(27, 24, 29);
+}
+header img{
+    width: 50%;
+}
+header div{
+    display: flex;
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+}
+.titulo{
+    margin: auto;
+    width: 85%;
+}
+h1{
+    margin: 0;
+}
+header button{
+    width: 100%;
+    font-size: 25px;
+    z-index: 1001;
+    border-radius: 15px; 
+}
+main{
+    background: rgb(52,121,54);
+    background: radial-gradient(circle, rgba(52,121,54,1) 0%, rgba(38,71,39,1) 85%);
+    height: 85%;
+    display: flex;
+    justify-content: center;
+}
+main div{
+    margin: 1%;
+    width: 33.3333%;
+}
+button{
+    cursor: pointer;
+}
+.jugadores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:25px;
+    background-color:rgb(67 135 67);
+    border-radius: 20px;
+    border-style: solid;
+    border-color:#193f03 ;
+}
+.opciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.opciones button{
+    width: 75%;
+    font-size: 25px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color:#5e4408 ;
+}
+ input{
+    border-radius: 15px;
+    padding: 2%;
+    text-align: center;
+    font-size: 25px;
+    width: 40%;
+    cursor: default;
+ }
+ #pcar,#fi,#dividirb{
+    background-color: gray;
+ }
+ #limp{
+    display: none;
+ }
+ .win{
+    z-index: 1002;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.82);
+    align-items: center;
+    justify-content: center;
+    display: none;
+ }
+ .divc{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    text-align: left;
+    padding: 1.5%;
+    border-radius: 20px;
+ }
+ .win button{
+    font-size: 25px;
+    border-radius: 10px;
+ }
+ .win h2{
+    font-size: 50px;
+ }
+ .puntajeF{
+    display: flex;
+ }
+ .puntajeF div{
+    text-align: center;
+    width: 50%;
+ }
+ .puntajeF p{
+    font-size: 25px;
+ }
+ .cartas{
+    background-color: rgb(27 65 28);
+    width: 90%;
+    height: 52.5%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: relative; 
+    box-shadow: 0px 0px 4px rgb(197, 206, 148)
+}
+#cartasJdivi{
+    display: none;
+}
+.divi{
+    background-color: rgb(27 65 28);
+    width: 90%;
+    height: 85%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#divi1,#divi2{
+    position: relative;
+    height: 100%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+}
+.divi img{
+    width: 40%;
+    margin: 5%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(calc(20px * var(--index)), calc(-20px * var(--index)));
+}
+#senal1,#senal2{
+    height: 15px;
+    width: 15px;
+    background-color: greenyellow;
+    border-radius: 100px;
+    margin: 5px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: none;
+}
+.divi p{
+    color: white;
+}
+.dividi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+#puntajeJdivi1, #puntajeJdivi2{
+    width: 100%;
+    text-align: center;
+}
+#puntajeJ22{
+    display: none;
+}
+.cartas img{
+    width: 25%;
+    margin: 5%;
+    position: absolute;
+    left: 12.5%;
+    top: 20%;
+    transform: translate(calc(25px * var(--index)), calc(-10px * var(--index)));
+}
+.cartas img:nth-child(1) { --index: 0; }
+.cartas img:nth-child(2) { --index: 1; }
+.cartas img:nth-child(3) { --index: 2; }
+.cartas img:nth-child(4) { --index: 3; }
+.cartas img:nth-child(5) { --index: 4; }
+.cartas img:nth-child(6) { --index: 5; }
+.cartas img:nth-child(7) { --index: 6; }
+.cartas img:nth-child(8) { --index: 7; }
+
+.divi img:nth-child(1) { --index: 0; }
+.divi img:nth-child(2) { --index: 1; }
+.divi img:nth-child(3) { --index: 2; }
+.divi img:nth-child(4) { --index: 3; }
+.divi img:nth-child(5) { --index: 4; }
+.divi img:nth-child(6) { --index: 5; }
+.divi img:nth-child(7) { --index: 6; }
+.divi img:nth-child(8) { --index: 7; }
+
+.rondas{
+    width: 100%;
+    border-style: solid;
+    border-color: #306a31;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px black;
+    color: #fff;
+    font-size: 20px;
+    margin: 0;
+}
+#limpiarFinal,#derVicEmp{
+    display: none;
+}
+#derVicEmp{
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 3px 4px 2px rgb(27, 24, 29);
+}

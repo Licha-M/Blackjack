@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>BlackJack</title>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" sizes="32x32" href="icono.ico">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="programa.js"></script>
+        <!--Muñoz y Geréz-->
+    </head>
+    <body>
+        <div id="reglasl" class="reglas">
+            <div class="reglas2">
+                <h2 class="retit2">Reglas:</h2>
+                <br>
+                <h3>Objetivo del juego:</h3>
+                <p>En el <strong>BlackJack</strong> o <strong>Veintiuno</strong>, la idea es llegar a 21 o acercarse lo más posible.</p>
+                <h3>¿Cómo se juega?</h3>
+                <p>En el juego hay dos jugadores, el crupier y el jugador. La primera parte del juego se basa en repartir dos cartas para cada uno. En la segunda parte, el jugador puede pedir la cantidad de cartas que quiera para llegar a 21 o acercarse. En la última parte, cuando el jugador pare, el crupier toma cartas si tiene 16 o menos, y finalmente se ve quién gana al comprobar quién tiene 21 o quién se acerca más. Si un jugador se pasa de 21, gana el que no se haya pasado.</p>
+                <h3>Reglas básicas:</h3>
+                <ul>
+                    <li>Se juega con 52 cartas, sin los comodines.</li>
+                    <li>El crupier está obligado a pedir carta siempre que su puntuación sume 16 puntos o menos.</li>
+                    <li>Puedes solicitar cartas extra para mejorar tu mano con el botón que dice "Parar".</li>
+                    <li>Cuando el valor total de tu mano sea 21 o inferior, puedes elegir plantarte y no arriesgar a que tu mano supere 21. Si te pasas de 21, pasa al turno del crupier y termina el juego.</li>
+                </ul>
+                <h3>Botones:</h3>
+                <ul>
+                    <li>Repartir: Inicio del juego.</li>
+                    <li>Pedir Carta: Pide una carta aleatoria para sumar a tu mano.</li>
+                    <li>Parar: Deja de sumar cartas para dar turno al crupier.</li>
+                    <li>Dividir: Puedes dividir dos cartas que tienen el mismo valor para generar dos jugadas <a id="abrir" onclick="windivire(true)" href="javascript:void(0)">¿Cómo funciona?</a>.</li>
+                    <li>Retirarse: Te vas de la mesa y pierdes al instante.</li>
+                </ul>
+                <div id="reglasdediv" class="reglasdediv">
+                    <h3>Dividir:</h3>
+                    <p>Una vez presionado el botón dividir, se debe tomar carta para cualquiera de los dos mazos. Si un mazo se pasa de 21, se seguirá inmediatamente al otro mazo; de lo contrario, para pasar al otro mazo deberás apretar "Parar". En el segundo mazo, al oprimir "Parar" o al pasarse de 21, pasa al turno del crupier.</p>
+                    <p>¿Cómo se gana en el dividir?</p>
+                    <ul>
+                        <li>Ganás si el crupier se pasa de 21.</li>
+                        <li>Ganás si ambos mazos están más cerca de 21.</li>
+                        <li>Ganás si cualquiera de los dos mazos está más cerca de 21.</li>
+                    </ul>
+                    <p><strong>Nota:</strong> Fíjate en la marca verde que indica en que mazo estas</p>
+                </div>
+                <h3>Probabilidad de pasarse de 21:</h3>
+                <p>Según tu mazo, tienes diferentes probabilidades de pasarte de 21.</p>
+                <table>
+                    <tr><td class="th2">Valor de la mano</td><td class="th2">Probabilidad de pasar a 21</td></tr>
+                    <tr><td>21</td><td>100 %</td></tr>
+                    <tr><td>20</td><td>92 %</td></tr>
+                    <tr><td>19</td><td>85 %</td></tr>
+                    <tr><td>18</td><td>77 %</td></tr>
+                    <tr><td>17</td><td>69 %</td></tr>
+                    <tr><td>16</td><td>62 %</td></tr>
+                    <tr><td>15</td><td>58 %</td></tr>	
+                    <tr><td>14</td><td>56 %</td></tr>	
+                    <tr><td>13</td><td>39 %</td></tr>	
+                    <tr><td>12</td><td>31 %</td></tr>	
+                    <tr><td>Menor a 11</td><td>00 %</td></tr> 
+                </table>
+                <h3>Valores de las cartas:</h3>
+                <p>En el juego, las cartas tienen diferentes valores.</p>
+                <table class="valores">
+                    <tr><td class="th2">Carta</td><td class="th2">Valor</td><td>En qué situación</td></tr>
+                    <tr><td>Ases</td><td>1 u 11</td><td>Variable en función a tu mano.</td></tr>
+                    <tr><td>2</td><td>2</td><td>Igual al valor de la carta.</td></tr>
+                    <tr><td>3</td><td>3</td><td>Igual al valor de la carta.</td></tr>
+                    <tr><td>4</td><td>4</td><td>Igual al valor de la carta.</td></tr>
+                    <tr><td>5</td><td>5</td><td>Igual al valor de la carta.</td></tr>
+                    <tr><td>6</td><td>6</td><td>Igual al valor de la carta.</td></tr>
+                    <tr><td>7</td><td>7</td><td>Igual al valor de la carta.</td></tr>	
+                    <tr><td>8</td><td>8</td><td>Igual al valor de la carta.</td></tr>	
+                    <tr><td>9</td><td>9</td><td>Igual al valor de la carta.</td></tr>	
+                    <tr><td>10</td><td>10</td><td>Igual al valor de la carta.</td></tr>	
+                    <tr><td>J</td><td>10</td><td>Vale 10 siempre.</td></tr> 
+                    <tr><td>Q</td><td>10</td><td>Vale 10 siempre.</td></tr>
+                    <tr><td>K</td><td>10</td><td>Vale 10 siempre.</td></tr>
+                </table>
+            </div>            
+        </div>
+        <div class="win" id="win">
+            <div class="divc">
+                <h2 id="wintit" class="retit">Nada</h2>
+                <button id="limpiarWin" onmouseover="hover(this,false)" onmouseleave="hover(this,true)" type="button" onclick="limpiar(false,false)">Ronda 0</button>
+                <button id="limpiarFinal" onmouseover="hover(this,false)" onmouseleave="hover(this,true)" type="button" onclick="window.location='index.html'">¿Volver a Jugar?</button>
+                <div class="puntajeF" id="puntajeFinal">
+                    <div id="fin">
+                        <p id="te2">Puntaje Del Jugador: </p>
+                        <input type="number" id="puntajeJ2" readonly="readonly" >
+                        <input type="number" id="puntajeJ22" readonly="readonly" >
+                    </div>
+                    <div>
+                        <p>Puntaje Del Crupier: </p>
+                        <input type="number" id="puntajeO2" readonly="readonly" >
+                    </div>
+                </div>
+                <div id="derVicEmp">
+                    <p id="dev2">0 Derrotas, 0 Empates, 0 Victorias</p>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div>
+                <img src="logo.png" alt="logo">
+            </div>
+            <div class="titulo">
+                <h1>BlackJack</h1>
+            </div>
+            <div>
+                <button onmouseover="hover(this,false)" onmouseleave="hover(this,true)" class="reglasb" type="button" onclick="reglas(this,false)">Reglas</button>
+            </div>
+        </header>
+        <main>
+            <div class="jugadores">
+                <h2>Jugador</h2>
+                <p id="te">Puntaje: </p>
+                <input type="number" id="puntajeJ" readonly="readonly" >
+                <br>
+                <div class="cartas" id="cartasJ">
+                    
+                </div>
+                <div class="divi" id="cartasJdivi">
+                    <div id="divi1">
+                        <div class="dividi">
+                            <p>Puntaje: </p>
+                            <input type="number" id="puntajeJdivi1" readonly="readonly" >
+                            <div id="senal1"></div>
+                        </div>
+                        
+                    </div>
+                    <div id="divi2">
+                        <div class="dividi">
+                            <p>Puntaje: </p>
+                            <input type="number" id="puntajeJdivi2" readonly="readonly" >  
+                            <div id="senal2"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="opciones">
+                <div class="rondas">
+                    <p id="rondas">Rondas 0/10</p>
+                    <p id="dev">0 Derrotas, 0 Empates, 0 Victorias</p>
+                </div>
+                <button onmouseover="hover(this,false)" onmouseleave="hover(this,true)" id="repar" type="button" onclick="comienzo()">Repartir</button>
+                <button  id="pcar" type="button">Pedir Carta</button>
+                <button  id="fi" type="button">Parar</button>
+                <button  id="dividirb" type="button">Dividir</button>
+                <button  id="limp" type="button" onclick="limpiar(true)">Retirarse</button>
+            </div>
+            <div class="jugadores">
+                <h2>Crupier</h2>
+                <p>Puntaje: </p>
+                <input type="number" id="puntajeO" readonly="readonly" >
+                <br>
+                <div class="cartas" id="cartasO">
+
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
